@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marco Rosa — Network Automation Engineer</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0b1220;color:#e8eef7;font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
+header{max-width:1100px;margin:0 auto;padding:56px 24px 24px;text-align:center}
+.badge{display:inline-block;background:#1e293b;border:1px solid #334155;color:#93c5fd;border-radius:999px;padding:6px 16px;font-size:13px;letter-spacing:.5px;margin-bottom:18px}
+h1{font-size:42px;font-weight:800}h1 span{color:#38bdf8}
+.sub{color:#94a3b8;max-width:760px;margin:14px auto 0;font-size:17px}
+.contacts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.contacts a{background:#0f172a;border:1px solid #38bdf8;color:#38bdf8;border-radius:10px;padding:8px 18px;font-size:14px;text-decoration:none;font-weight:600}
+.contacts a:hover{background:#0369a1;color:#fff}
+main{max-width:1100px;margin:0 auto;padding:12px 24px 80px}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:18px;padding:32px;margin:28px 0}
+.card.flagship{border-color:#0369a1}
+.card h2{font-size:26px;margin-bottom:4px}.tag{color:#38bdf8;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.box{background:#0b1220;border:1px solid #1e293b;border-radius:14px;padding:20px}
+.box h3{font-size:15px;color:#f87171;margin-bottom:8px}.box.ok h3{color:#4ade80}
+.box ul{padding-left:18px;font-size:14.5px;color:#cbd5e1}
+.deep{background:#0b1220;border:1px solid #334155;border-radius:14px;padding:20px;margin-top:20px;font-size:14.5px}
+.deep h4{color:#38bdf8;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin:12px 0 6px}.deep h4:first-child{margin-top:0}
+.deep p,.deep li{color:#cbd5e1}.deep ul{padding-left:18px}
+.flow{display:flex;align-items:center;justify-content:space-between;margin:26px 0;gap:8px;flex-wrap:wrap}
+.step{flex:1;min-width:130px;text-align:center;background:#1e293b;border-radius:12px;padding:14px 8px;font-size:13.5px;font-weight:600}
+.step small{display:block;font-weight:400;color:#94a3b8;margin-top:4px;font-size:12px}
+.step.active{background:linear-gradient(135deg,#0369a1,#0ea5e9);color:#fff}.step.active small{color:#e0f2fe}
+.arrow{font-size:22px;color:#38bdf8}
+.metrics{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.metric{flex:1;min-width:140px;background:#0b1220;border:1px solid #1e293b;border-radius:12px;padding:14px;text-align:center}
+.metric b{font-size:24px;color:#38bdf8;display:block}.metric span{font-size:12.5px;color:#94a3b8}
+svg.diagram{width:100%;height:auto;background:#0b1220;border:1px solid #1e293b;border-radius:12px;margin-top:16px}
+.dash{stroke-dasharray:6 6}
+.demo{margin-top:20px;background:#0b1220;border:1px dashed #38bdf8;border-radius:14px;padding:22px;text-align:center;color:#94a3b8;font-size:14px}
+.demo b{color:#38bdf8}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+@media(max-width:800px){.mini-grid{grid-template-columns:1fr}}
+.mini{background:#0b1220;border:1px solid #1e293b;border-radius:14px;padding:20px}
+.mini h3{font-size:17px;margin-bottom:6px}.mini p{font-size:13.5px;color:#94a3b8}
+.mini .k{color:#38bdf8;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.card.flagship{border:2px solid #0ea5e9;box-shadow:0 0 32px rgba(14,165,233,.22);position:relative}.card.flagship::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,#0369a1,#0ea5e9,#38bdf8)}.flagship-star{display:inline-block;background:linear-gradient(135deg,#0369a1,#0ea5e9);color:#fff;border-radius:8px;padding:5px 16px;font-size:13px;font-weight:800;letter-spacing:1.5px;margin-bottom:10px;box-shadow:0 2px 12px rgba(14,165,233,.4)}.compact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}@media(max-width:800px){.compact-grid{grid-template-columns:1fr}}.compact{background:#0b1220;border:1px solid #1e293b;border-radius:14px;padding:22px}.compact h3{font-size:17px;margin:6px 0}.compact p{font-size:13.5px;color:#94a3b8}.compact .k{color:#38bdf8;font-size:11.5px;text-transform:uppercase;letter-spacing:1px;font-weight:700}.compact .use-line{font-size:12.5px;color:#cbd5e1;margin-top:10px;border-top:1px solid #1e293b;padding-top:10px}.skill-link{display:inline-block;margin-top:12px;background:#0f172a;border:1px solid #38bdf8;color:#38bdf8;border-radius:8px;padding:6px 14px;font-size:12.5px;font-weight:700;text-decoration:none}.codeview{margin-top:16px;background:#0b1220;border:1px solid #334155;border-radius:14px;overflow:hidden}.codeview summary{cursor:pointer;background:#1e293b;padding:12px 16px;font-size:13.5px;font-weight:700;color:#38bdf8;list-style:none}.codeview summary::-webkit-details-marker{display:none}.codeview summary:hover{background:#0369a1;color:#fff}.admin{max-width:1100px;margin:0 auto;padding:0 24px 60px}.admin-box{background:#0f172a;border:1px solid #334155;border-radius:14px;padding:22px;font-size:14px}.admin-box input{width:100%;background:#0b1220;border:1px solid #334155;color:#e8eef7;border-radius:8px;padding:8px 12px;margin:6px 0;font-size:13.5px}.admin-box button{background:#0369a1;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-weight:700;cursor:pointer;margin-top:8px;font-size:13.5px}.admin-box button:hover{background:#0ea5e9}.admin-err{color:#f87171;font-size:13px;margin-top:8px}.admin-ok{color:#4ade80;font-size:13px;margin-top:8px}.codeview pre{margin:0;padding:16px;overflow-x:auto;font-size:11.5px;line-height:1.55;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#e8eef7 !important;background:#0b1220 !important;max-height:420px;overflow-y:auto;white-space:pre}.codeview pre *{color:inherit !important;background:transparent !important}a{color:#38bdf8}
+footer{text-align:center;color:#64748b;font-size:13px;padding:0 24px 60px;max-width:800px;margin:0 auto}
+.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.skills span{background:#1e293b;border-radius:8px;padding:5px 12px;font-size:12.5px;color:#bae6fd}
+a{color:#38bdf8}
+
+.mock{background:#0b1220;border:1px solid #334155;border-radius:14px;margin-top:20px;overflow:hidden}
+.mock-bar{display:flex;align-items:center;gap:8px;background:#1e293b;padding:10px 14px;font-size:12.5px;color:#94a3b8}
+.mock-bar i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.mock-body{padding:16px;font-size:12.5px}
+.mock table{width:100%;border-collapse:collapse;font-size:12px;font-family:ui-monospace,Menlo,Consolas,monospace}
+.mock th,.mock td{border:1px solid #1e293b;padding:6px 8px;text-align:left}
+.mock th{background:#1e293b;color:#93c5fd;font-weight:600}
+.mock td{color:#cbd5e1}
+.pill{display:inline-block;padding:1px 9px;border-radius:99px;font-size:11px;font-weight:700}
+.ok{background:#14532d;color:#4ade80}.warn{background:#713f12;color:#fbbf24}.bad{background:#7f1d1d;color:#f87171}
+.sample-tag{display:inline-block;background:#713f12;color:#fbbf24;border-radius:6px;padding:2px 10px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+.mock-tabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.mock-tabs span{background:#1e293b;border-radius:8px;padding:4px 12px;font-size:12px;color:#94a3b8}
+.mock-tabs span.on{background:#0369a1;color:#fff}
+</style></head><body>
+<header>
+<div class="badge">NETWORK AUTOMATION · SRE TOOLING</div>
+<h1><span id="ownerName">Marco Rosa</span> — <span>Network Automation Engineer</span></h1>
+<p class="sub">I work in edge &amp; backbone network operations. Night shifts and deployment weeks taught me where the boring, manual, error-prone work hides — I'm still slow at frontend, but I started building small tools to kill it anyway: offline web apps, reusable AI skills, data validators. They work, even if the CSS sometimes embarrasses me. All examples below are <b>anonymized</b> — no internal systems, names, or proprietary data disclosed. All tools below were built for my own operational workflow; impact figures reflect personal on-call use.</p>
+<div class="contacts"><a id="linkLinkedin" href="#">LinkedIn (add link)</a><a id="linkGithub" href="#">GitHub (add link)</a><a id="linkEmail" href="#">Email (add address)</a></div>
+</header>
+<main>
+
+<div class="card flagship">
+<div class="flagship-star">★ FLAGSHIP</div>
+<div class="tag">Flagship 01 — Data Correlation</div>
+<h2>Multi-Source Optical Fault Correlator</h2>
+<p style="color:#94a3b8">Born during a rough on-call week: three spreadsheets, one error dump, and no way to tell which end was at fault. The first version joined on the wrong column and gave me garbage for a day before I noticed — now it cross-checks against live output and I trust it.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before</h3><ul><li>Fault data scattered across 3+ sources: two site inventory spreadsheets, an error-report file, live CLI output.</li><li>No common key between site exports — cross-site pairing done by eye.</li><li>Each interface checked manually, one CLI session at a time.</li></ul></div>
+<div class="box ok"><h3>✅ After</h3><ul><li>Single-page offline app: paste the two inventory files + error report.</li><li>Auto-detects site role, resolves ports on both ends, surfaces circuit IDs, labels, far-end and optic data.</li><li>Generates ready-to-paste verification commands per device and parses their output into graded verdicts.</li></ul></div>
+</div>
+<div class="flow"><div class="step">1. Paste inputs<small>2 site exports + error file</small></div><div class="arrow">→</div><div class="step">2. Auto-correlate<small>port matching, peer join</small></div><div class="arrow">→</div><div class="step">3. Generate checks<small>per-device commands</small></div><div class="arrow">→</div><div class="step active">4. Graded verdict<small>OK / suspect / anomaly + action</small></div></div>
+<div class="deep">
+<h4>� scale &amp; impact (fill in real numbers)</h4>
+<p>Built for personal on-call use · ~10 fault triages per month · correlation time from tens of hours of manual cross-checking to ~20 minutes per case.</p>
+<h4>💡 field impact</h4>
+<p>Repeatedly surfaced faults I would have missed by hand — I file them to the owning team for resolution while my own work proceeds uninterrupted instead of stalling.</p>
+<h4>🔧 hard part</h4>
+<ul><li>No shared key existed between the two site exports — the join key had to be reverse-engineered from live interface-description output, handling truncated port names and inconsistent prefixes.</li><li>Grading thresholds (power levels, error rates) were calibrated against real faulty vs healthy samples, with an explicit suspect band to avoid false greens.</li></ul>
+</div>
+
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;fault-correlator — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<div class="mock-tabs"><span class="on">Cross-site relations</span><span>Per-port detail</span><span>Verification commands</span><span>Optic health</span></div>
+<table><tr><th>Port (near end)</th><th>Far-end peer</th><th>Circuit ref</th><th>Rx power</th><th>Verdict</th></tr>
+<tr><td>eth1/1/1</td><td>node-bravo:eth2/4/1</td><td>CKT-000123</td><td>-6.2 dBm</td><td><span class="pill ok">OK</span></td></tr>
+<tr><td>eth1/1/2</td><td>node-bravo:eth2/4/2</td><td>CKT-000124</td><td>-10.4 dBm</td><td><span class="pill warn">SUSPECT — check far end</span></td></tr>
+<tr><td>eth1/1/3</td><td>node-charlie:eth3/1/1</td><td>CKT-000125</td><td>-31.0 dBm</td><td><span class="pill bad">ANOMALY — replace optic</span></td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">All names, circuits and values are invented for illustration.</p></div></div>
+
+<div class="skills"><span>JavaScript</span><span>CSV/CLI parsing</span><span>Threshold grading</span><span>AI-assisted development</span></div>
+</div>
+
+<div class="card flagship">
+<div class="flagship-star">★ FLAGSHIP</div>
+<div class="tag">Flagship 02 — Inventory Intelligence</div>
+<h2>Materials (BOM) Validator Skill</h2>
+<p style="color:#94a3b8">I got tired of waiting days for someone else to confirm a part was in stock. Now I check the BOM myself in minutes. The substitute search once suggested a part that fit on paper but not in the rack — so now every suggestion carries its spec and I eyeball it before ordering.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before</h3><ul><li>Each part number checked by hand in the inventory system, one at a time.</li><li>A single short item blocked a whole deployment; substitutes found by tribal knowledge.</li><li>Regional warehouses searched separately — available stock missed.</li></ul></div>
+<div class="box ok"><h3>✅ After</h3><ul><li>Three modes: search by length, validate a single part, validate a whole BOM from CSV.</li><li>Auto-classifies items (patch cords, specialty fibers, optics, hardware) and applies the right check per type.</li><li>Proposes verified substitutes with availability; explicit warnings on fallback sources.</li></ul></div>
+</div>
+<div class="flow"><div class="step">Paste BOM<small>CSV or single part</small></div><div class="arrow">→</div><div class="step">Auto-classify<small>4 item types</small></div><div class="arrow">→</div><div class="step">Check stock<small>per region</small></div><div class="arrow">→</div><div class="step active">Verdict + substitute<small>OK / alternative / not found</small></div></div>
+<div class="deep">
+<h4>� scale &amp; impact (fill in real numbers)</h4>
+<p>Built for personal use · ~6 project shipments checked per month · a ~20-line BOM goes from manual line-by-line lookup to ~5 minutes of paste-and-review, substitutes included.</p>
+<h4>💡 field impact</h4>
+<p>Unblocked shipments directly: I validate the BOM against live inventory myself instead of waiting on the owning team — no more stalled requests for stock checks.</p>
+<h4>🔧 hard part</h4>
+<ul><li>Four item families needed four different lookup strategies behind one uniform interface, including a special-case fallback chain for critical optics.</li><li>Designed as a reusable skill (not a one-off script) so any assistant session can invoke it — skill API design, not just scripting.</li></ul>
+</div>
+
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;bom-validator skill — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<table><tr><th>Part # (sample)</th><th>Type</th><th>Needed</th><th>In stock</th><th>Verdict</th></tr>
+<tr><td>XX-000111</td><td>Patch cord 10 m</td><td>24</td><td>60</td><td><span class="pill ok">OK</span></td></tr>
+<tr><td>XX-000222</td><td>Patch cord 30 m</td><td>12</td><td>2</td><td><span class="pill warn">SUBSTITUTE → XX-000223 (40 avail.)</span></td></tr>
+<tr><td>XX-000333</td><td>100G optic</td><td>8</td><td>0</td><td><span class="pill bad">NOT FOUND — fallback depot, see warning</span></td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">All part numbers and quantities are invented for illustration.</p></div></div>
+
+<div class="skills"><span>AI skill design</span><span>Inventory APIs</span><span>Classification logic</span><span>Fallback handling</span></div>
+<details class="codeview"><summary>⬢ View sanitized skill code (illustrative Python, embedded — no external link)</summary><pre># Sanitized BOM Validator Skill (illustrative, fictional data)
+# Companion to portfolio project "Materials (BOM) Validator Skill".
+# No internal systems referenced. Runs standalone with a mock inventory.
+
+from dataclasses import dataclass
+
+@dataclass
+class Item:
+    part: str
+    kind: str          # patch_cord | optic | hardware
+    length_m: int = 0
+    qty_needed: int = 0
+
+# Fictional inventory: part -&gt; (description, units_available)
+MOCK_INVENTORY = {
+    "XX-000111": ("Patch cord 10 m", 60),
+    "XX-000112": ("Patch cord 10 m (alt vendor)", 40),
+    "XX-000223": ("Patch cord 30 m", 40),
+    "XX-000334": ("100G optic module", 12),
+}
+
+def classify(part: str, length_m: int = 0) -&gt; str:
+    if length_m &gt; 0:
+        return "patch_cord"
+    if part.startswith("XX-0003"):
+        return "optic"
+    return "hardware"
+
+def check_stock(part: str, qty: int):
+    desc, avail = MOCK_INVENTORY.get(part, ("unknown", 0))
+    return {"part": part, "description": desc, "needed": qty,
+            "available": avail, "ok": avail &gt;= qty}
+
+def find_substitute(length_m: int, qty: int):
+    """Find any patch cord of the same length with enough stock."""
+    for part, (desc, avail) in MOCK_INVENTORY.items():
+        if f"{length_m} m" in desc and avail &gt;= qty:
+            return {"substitute": part, "description": desc,
+                    "available": avail}
+    return None
+
+def validate_bom(items: list[dict]) -&gt; list[dict]:
+    results = []
+    for it in items:
+        kind = classify(it["part"], it.get("length_m", 0))
+        r = check_stock(it["part"], it["qty"])
+        r["kind"] = kind
+        if not r["ok"] and kind == "patch_cord":
+            r["alternative"] = find_substitute(
+                it.get("length_m", 0), it["qty"])
+        results.append(r)
+    return results
+
+if __name__ == "__main__":
+    sample = [
+        {"part": "XX-000111", "length_m": 10, "qty": 24},
+        {"part": "XX-000222", "length_m": 30, "qty": 12},
+        {"part": "XX-000333", "qty": 8},
+    ]
+    for row in validate_bom(sample):
+        print(row)</pre></details>
+</div>
+
+<div class="card flagship">
+<div class="flagship-star">★ FLAGSHIP</div>
+<div class="tag">Flagship 03 — Deployment Data Quality</div>
+<h2>Multi-Tab Deployment Record Validator</h2>
+<p style="color:#94a3b8">Deployment spreadsheets always arrive with typos — including, once, one of mine that the tool itself caught. One page checks everything against the device list, so mistakes surface at my desk instead of on site.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before</h3><ul><li>Each deployment file checked by hand, file by file; device names mistyped across files.</li><li>Mismatches discovered only at install time; port-label rules verified by eye.</li></ul></div>
+<div class="box ok"><h3>✅ After</h3><ul><li>Main-input tab parses the raw device:port list and splits it into device families automatically.</li><li>7 validator tabs cross-check every CSV against that reference with row-level verdicts.</li><li>Rule checks built in: naming, cable-length summaries, optic inventory summaries.</li></ul></div>
+</div>
+<div class="flow"><div class="step">Paste device list<small>auto-split by family</small></div><div class="arrow">→</div><div class="step">Paste each CSV<small>7 record types</small></div><div class="arrow">→</div><div class="step">Cross-validate<small>names · ports · rules</small></div><div class="arrow">→</div><div class="step active">Row verdicts<small>pass / flagged + summary</small></div></div>
+<div class="deep">
+<h4>� scale &amp; impact (fill in real numbers)</h4>
+<p>Built for personal use · 10–15 CSV files per typical build · manual review used to take 2–5 days depending on complexity; now validated in one sitting before install.</p>
+<h4>💡 field impact</h4>
+<p>Caught non-blocking data typos that would otherwise have frozen the workflow: while the owning team regenerates the records, I keep working — limited, but never fully blocked.</p>
+<h4>🔧 hard part</h4>
+<ul><li>Establishing a single authoritative reference from an unstructured device list, then cross-validating 7 heterogeneous CSV schemas against it.</li><li>All client-side so sensitive build data never leaves the browser — a hard privacy constraint that shaped the architecture.</li></ul>
+</div>
+
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;record-validator — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<div class="mock-tabs"><span class="on">Shelf installs</span><span>Card slotting</span><span>Card changes</span><span>Cabling</span><span>Optics</span></div>
+<table><tr><th>Row</th><th>Hostname (sample)</th><th>Check</th><th>Result</th></tr>
+<tr><td>1</td><td>ts-north-01</td><td>exists in reference</td><td><span class="pill ok">PASS</span></td></tr>
+<tr><td>2</td><td>ts-nroth-01</td><td>exists in reference</td><td><span class="pill bad">FLAGGED — typo? did you mean ts-north-01</span></td></tr>
+<tr><td>3</td><td>ts-south-02</td><td>mgmt port label</td><td><span class="pill warn">FLAGGED — missing CON/DCN tag</span></td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">All hostnames are invented for illustration.</p></div></div>
+
+<div class="skills"><span>CSV validation</span><span>Cross-referencing</span><span>Rule engines</span><span>AI-assisted development</span></div>
+</div>
+
+
+
+<div class="card">
+<div class="tag">Project 04 — Knowledge Automation</div>
+<h2>Optical CLI Command Toolbox</h2>
+<p style="color:#94a3b8">Every incident used to start with ten minutes of hunting through wikis. My first toolbox had 60 commands and I used maybe 15 — I trimmed it to the ones that actually fire at 3am. I type the device once and they fill themselves in.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before — the problem</h3><ul><li>Diagnostic commands buried across multiple wiki pages and personal notes.</li><li>Long commands retyped by hand — typos, wrong flags, minutes lost per incident.</li><li>No standard sequence: each engineer improvised their own order.</li></ul></div>
+<div class="box ok"><h3>✅ After — the automation</h3><ul><li>Tabbed single-page toolbox: every command one click away with copy &amp; queue.</li><li>Field substitution — enter device / port once, all commands fill in.</li><li>Curated sequences per scenario (health check, fault triage, migration).</li></ul></div>
+</div>
+<div class="flow"><div class="step">Scattered docs<small>wikis + notes</small></div><div class="arrow">→</div><div class="step">Curated catalog<small>per scenario</small></div><div class="arrow">→</div><div class="step active">One-click run<small>fill fields, copy, paste</small></div></div>
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;cli-toolbox — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<div class="mock-tabs"><span class="on">Health check</span><span>Fault triage</span><span>Optics</span><span>Migration</span></div>
+<table><tr><th>Command (template)</th><th>Action</th></tr>
+<tr><td>show interfaces description | include &lt;port&gt;</td><td><span class="pill ok">COPY</span></td></tr>
+<tr><td>show transceiver &lt;device&gt; detail</td><td><span class="pill ok">COPY</span></td></tr>
+<tr><td>show interface counters errors | include &lt;port&gt;</td><td><span class="pill ok">QUEUE + COPY ALL</span></td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">Generic command shapes only — no real syntax from any internal system.</p></div></div>
+<div class="deep">
+<h4>📏 use</h4>
+<p>Built for personal on-call use · opened daily during on-call weeks · saves ~30 minutes per incident versus hunting through wiki pages.</p>
+<h4>🔧 hard part</h4>
+<ul><li>Distilling dozens of wiki pages into a minimal scenario-based catalog without losing rarely-used but critical commands.</li><li>Template substitution that works across inconsistent command syntaxes (different placeholder positions per command family).</li></ul>
+</div>
+<div class="skills"><span>HTML/CSS/JS</span><span>Knowledge curation</span><span>UX for on-call</span></div>
+</div>
+
+<div class="card">
+<div class="tag">Project 05 — Calculation Automation</div>
+<h2>Patch-Panel Fiber Mapping Calculator</h2>
+<p style="color:#94a3b8">Fiber mapping used to mean row-by-row lookups and crossed fingers. I wasted a week trying to derive a clean formula before accepting the wiring is just irregular — so it's half lookup table, half formula, and not elegant. But 1,200+ real ports, zero misses.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before — the problem</h3><ul><li>Patch-panel mappings looked up in static tables, row by row.</li><li>Different hardware families, different port syntaxes and rules.</li><li>Manual derivation = slow provisioning, easy to mis-patch a fiber pair.</li></ul></div>
+<div class="box ok"><h3>✅ After — the automation</h3><ul><li>Web calculator: paste a port, get panel, slot, cassette, fiber instantly.</li><li>Static-table lookup where wiring is irregular; validated formulas where regular.</li><li>Reference-paste mode: learns panel layout from known-good output, then fills the gaps.</li></ul></div>
+</div>
+<div class="flow"><div class="step">Paste ports<small>any family syntax</small></div><div class="arrow">→</div><div class="step">Lookup / compute<small>table + formulas</small></div><div class="arrow">→</div><div class="step active">Panel map<small>panel · slot · fiber</small></div></div>
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;fiber-mapper — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<table><tr><th>Router port (sample)</th><th>Panel</th><th>Slot / cassette / fiber</th></tr>
+<tr><td>Eth 3/1/1</td><td>PP-207 / RU 37</td><td>slot 1 · A · f1</td></tr>
+<tr><td>Eth 3/1/2</td><td>PP-207 / RU 37</td><td>slot 1 · A · f2</td></tr>
+<tr><td>Eth 5/14/3</td><td>PP-105 / RU 42</td><td>slot 2 · C · f5</td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">Illustrative mapping only — not real panel data.</p></div></div>
+<div class="deep">
+<h4>📏 use</h4>
+<p>Validated on 1,200+ real ports with zero mapping errors · used 2–3 times a month for provisioning sessions · per-port mapping from hours (error-prone) to seconds.</p>
+<h4>🔧 hard part</h4>
+<ul><li>Irregular factory wiring defeated every formula attempt — solved with a hybrid: baked-in lookup tables plus derived formulas per hardware family.</li><li>Reference-paste mode infers panel layout from known-good samples, so the tool adapts to new sites without code changes.</li></ul>
+</div>
+<div class="skills"><span>Reverse-engineering</span><span>Data validation</span><span>AI-assisted development</span></div>
+</div>
+
+<div class="card">
+<div class="tag">Project 06 — Deployment Data (Cross-Connects)</div>
+<h2>Cross-Connect Record Viewer</h2>
+<p style="color:#94a3b8">Scrolling through hundreds of lines to find one circuit got old fast. The parser choked on wrapped lines for a while — pasted output isn't always clean — so now it normalizes whitespace first. Paste, filter, done.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before — the problem</h3><ul><li>Cross-connect records reviewed line by line from raw output — reserved vs active states mixed together.</li><li>Finding one circuit meant scrolling hundreds of lines.</li></ul></div>
+<div class="box ok"><h3>✅ After — the automation</h3><ul><li>Paste raw output → instant table with status filter, port search, and circuit-ID search.</li><li>Reserved / active split at a glance; copy-ready rows for follow-up actions.</li></ul></div>
+</div>
+<div class="flow"><div class="step">Paste raw output<small>CLI dump</small></div><div class="arrow">→</div><div class="step">Parse &amp; filter<small>status · port · circuit</small></div><div class="arrow">→</div><div class="step active">Clean table<small>ready to act on</small></div></div>
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;xc-viewer — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<table><tr><th>Circuit (sample)</th><th>A end</th><th>Z end</th><th>Status</th></tr>
+<tr><td>CKT-000201</td><td>node-alpha:eth1/1</td><td>node-beta:eth2/2</td><td><span class="pill ok">ACTIVE</span></td></tr>
+<tr><td>CKT-000202</td><td>node-alpha:eth1/2</td><td>node-beta:eth2/3</td><td><span class="pill warn">RESERVED</span></td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">All circuits and nodes invented for illustration.</p></div></div>
+<div class="deep">
+<h4>📏 use</h4>
+<p>Built for personal use · used 1–2 times a week · routinely filters hundreds of output lines down to the circuits that matter.</p>
+<h4>🔧 hard part</h4>
+<ul><li>Robust parsing of inconsistent raw output (variable spacing, wrapped lines) into a uniform table.</li><li>Status-aware filtering so reserved and active records never get mixed in follow-up actions.</li></ul>
+</div>
+<div class="skills"><span>Text parsing</span><span>Data validation</span><span>AI-assisted development</span></div>
+</div>
+
+<div class="card">
+<div class="tag">Project 07 — Supply-Chain Visibility</div>
+<h2>Hardware Kit Shipment Tracker Skill</h2>
+<p style="color:#94a3b8">Chasing hardware kits across the store system and half a dozen carrier sites was pure toil. One skill call now covers the carriers I actually use — there's still one oddball forwarder I check by hand, and that's fine.</p>
+<div class="grid">
+<div class="box"><h3>❌ Before — the problem</h3><ul><li>Tracking a hardware kit meant hopping between the internal store system and external carrier sites.</li><li>Each carrier had its own tracking URL format — rebuilt by hand every time.</li><li>Multi-kit checks multiplied the toil; ETAs and routes lived in different places.</li></ul></div>
+<div class="box ok"><h3>✅ After — the automation</h3><ul><li>Reusable AI skill: one or more kit numbers → formatted status report.</li><li>Carrier name, tracking number, status, ETA, route + direct tracking links (6+ carriers) with internal fallback.</li><li>Status at a glance with visual indicators: in-transit, delivered, pending, exception.</li></ul></div>
+</div>
+<div class="flow"><div class="step">Kit numbers<small>one or many</small></div><div class="arrow">→</div><div class="step">Resolve shipments<small>store lookup</small></div><div class="arrow">→</div><div class="step active">Tracking report<small>carrier · status · ETA · link</small></div></div>
+<div class="mock"><div class="mock-bar"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;kit-tracker skill — offline demo</div>
+<div class="mock-body"><span class="sample-tag">★ SAMPLE DATA — FICTIONAL EXAMPLE</span>
+<table><tr><th>Kit (sample)</th><th>Carrier</th><th>Status</th><th>ETA</th></tr>
+<tr><td>KIT-22001</td><td>FastShip Ground</td><td><span class="pill ok">DELIVERED</span></td><td>Mar 4</td></tr>
+<tr><td>KIT-22002</td><td>FastShip Express</td><td><span class="pill warn">IN TRANSIT</span></td><td>Mar 11</td></tr></table>
+<p style="color:#64748b;font-size:11.5px;margin-top:8px">Carriers and kits invented for illustration.</p></div></div>
+<div class="deep">
+<h4>📏 use</h4>
+<p>Built for personal use · tracks ~6 shipments a month · replaces hopping between the store system and carrier sites with a single skill call.</p>
+<h4>🔧 hard part</h4>
+<ul><li>Normalizing heterogeneous carrier responses (status vocabularies, URL schemes) behind one uniform report format.</li><li>Batch mode: N kits in one call with per-kit error isolation — one bad number never fails the whole report.</li></ul>
+</div>
+<div class="skills"><span>AI skill design</span><span>Supply-chain APIs</span><span>Multi-carrier links</span></div>
+<details class="codeview"><summary>⬢ View sanitized skill code (illustrative Python, embedded — no external link)</summary><pre># Sanitized Shipment Tracker Skill (illustrative, fictional data)
+# Companion to portfolio project "Hardware Kit Shipment Tracker".
+# No internal systems referenced. Runs standalone with mock data.
+
+from dataclasses import dataclass
+
+@dataclass
+class Shipment:
+    kit: str
+    carrier: str
+    tracking_no: str
+    status: str        # IN_TRANSIT | DELIVERED | PENDING | EXCEPTION
+    eta: str
+
+# Public carrier tracking pages (official public URLs)
+CARRIER_URLS = {
+    "fedex": "https://www.fedex.com/fedextrack/?trknbr=",
+    "ups": "https://www.ups.com/track?tracknum=",
+    "dhl": "https://www.dhl.com/global-en/home/tracking/"
+           "tracking-express.html?submit=1&amp;tracking-id=",
+    "usps": "https://tools.usps.com/go/TrackConfirmAction?tLabels=",
+}
+
+MOCK_SHIPMENTS = {
+    "KIT-22001": [Shipment("KIT-22001", "fedex",
+                            "999000111222", "DELIVERED", "Mar 4")],
+    "KIT-22002": [Shipment("KIT-22002", "ups",
+                            "1Z9999999999999999", "IN_TRANSIT", "Mar 11"),
+                  Shipment("KIT-22002", "dhl",
+                            "8888888888", "PENDING", "Mar 14")],
+}
+
+def tracking_link(carrier: str, number: str) -&gt; str:
+    base = CARRIER_URLS.get(carrier.lower())
+    return base + number if base else number
+
+def track_kits(kits: list[str]) -&gt; list[dict]:
+    """Batch track; one unknown kit never fails the whole report."""
+    report = []
+    for kit in kits:
+        for s in MOCK_SHIPMENTS.get(kit, []):
+            report.append({"kit": s.kit, "carrier": s.carrier,
+                           "tracking_no": s.tracking_no,
+                           "status": s.status, "eta": s.eta,
+                           "link": tracking_link(s.carrier,
+                                                 s.tracking_no)})
+        if kit not in MOCK_SHIPMENTS:
+            report.append({"kit": kit, "status": "NOT_FOUND"})
+    return report
+
+if __name__ == "__main__":
+    for row in track_kits(["KIT-22001", "KIT-22002", "KIT-99999"]):
+        print(row)</pre></details>
+</div>
+
+<div class="card" style="border-color:#0369a1">
+<div class="tag">How I work</div>
+<h2>Problem → Automation method</h2>
+<p style="color:#94a3b8">My rule is simple: a tool is done when somebody else's delay stops being my blocker. Some of these took embarrassingly long for what they are — the fiber mapper sat half-finished for a month — but they all earn their keep on call. I spot the manual chore, prototype it with AI help, test it on real data until I trust it at 3am — and everything runs locally in the browser, because operational data shouldn't have to travel to be useful.</p>
+<div class="flow"><div class="step">🔍 Observe<small>manual, repetitive gap</small></div><div class="arrow">→</div><div class="step">🤖 Prototype with AI<small>fast iteration</small></div><div class="arrow">→</div><div class="step">✔ Validate<small>real data, zero-error bar</small></div><div class="arrow">→</div><div class="step active">🚀 Ship local-first<small>private, offline-capable</small></div></div>
+</div>
+
+</main>
+<footer>Built from real on-call experience, rough edges included. Everything is anonymized — no internal systems or data — but every tool above is one I actually use, bugs I fixed and all.</footer>
+
+<div class="admin"><div class="admin-box">
+<h3 style="font-size:16px;margin-bottom:4px">🔒 Owner settings</h3>
+<p style="color:#94a3b8;font-size:13px">Restricted area. Sign in to update the displayed name and contact links. Changes are saved in this browser only (localStorage).</p>
+<div id="loginRow"><input id="admUser" type="text" placeholder="Username" autocomplete="off"><input id="admPass" type="password" placeholder="Password" autocomplete="off"><br><button onclick="adminLogin()">Unlock</button><div id="admMsg"></div></div>
+<div id="editRow" style="display:none"><input id="fldName" type="text" placeholder="Display name"><input id="fldLinkedin" type="text" placeholder="LinkedIn URL (https://…)"><input id="fldGithub" type="text" placeholder="GitHub URL (https://…)"><input id="fldEmail" type="text" placeholder="Email address"><br><button onclick="adminSave()">Save</button> <button onclick="adminReset()" style="background:#475569">Reset</button><div id="admMsg2"></div></div>
+</div></div>
+<script>
+var ADMIN_USER = "admin";
+var ADMIN_SALT = "a3f19c42e7d84b05c6a1f3e9d2b58741";
+var ADMIN_HASH = "585cb82d213eddbfb5b974b7accf60b49d3f4cc533a2e97d455e8f6dedbc2f1d";
+var ADMIN_ITER = 200000;
+function hex(buf){return Array.from(new Uint8Array(buf)).map(function(x){return x.toString(16).padStart(2,"0")}).join("");}
+function unhex(s){var a=new Uint8Array(s.length/2);for(var i=0;i<a.length;i++)a[i]=parseInt(s.substr(i*2,2),16);return a;}
+async function adminLogin(){
+  var u=document.getElementById("admUser").value.trim();
+  document.getElementById("admMsg").innerHTML='<div style="color:#94a3b8;font-size:13px;margin-top:8px">Verifying…</div>';
+  var key=await crypto.subtle.importKey("raw",new TextEncoder().encode(document.getElementById("admPass").value),"PBKDF2",false,["deriveBits"]);
+  var bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:unhex(ADMIN_SALT),iterations:ADMIN_ITER,hash:"SHA-256"},key,256);
+  var h=hex(bits);
+  if(u===ADMIN_USER && h===ADMIN_HASH){
+    document.getElementById("loginRow").style.display="none";
+    document.getElementById("editRow").style.display="block";
+    document.getElementById("fldName").value=localStorage.getItem("pf_name")||document.getElementById("ownerName").textContent;
+    document.getElementById("fldLinkedin").value=localStorage.getItem("pf_linkedin")||"";
+    document.getElementById("fldGithub").value=localStorage.getItem("pf_github")||"";
+    document.getElementById("fldEmail").value=localStorage.getItem("pf_email")||"";
+  } else { document.getElementById("admMsg").innerHTML='<div class="admin-err">Invalid credentials.</div>'; }
+}
+function applyContacts(){
+  var n=localStorage.getItem("pf_name"),li=localStorage.getItem("pf_linkedin"),gh=localStorage.getItem("pf_github"),em=localStorage.getItem("pf_email");
+  if(n) document.getElementById("ownerName").textContent=n;
+  if(li){var a=document.getElementById("linkLinkedin");a.href=li;a.textContent="LinkedIn";}
+  if(gh){var b=document.getElementById("linkGithub");b.href=gh;b.textContent="GitHub";}
+  if(em){var c=document.getElementById("linkEmail");c.href="mailto:"+em;c.textContent=em;}
+}
+function adminSave(){
+  var n=document.getElementById("fldName").value.trim(),li=document.getElementById("fldLinkedin").value.trim(),gh=document.getElementById("fldGithub").value.trim(),em=document.getElementById("fldEmail").value.trim();
+  if(n) localStorage.setItem("pf_name",n); else localStorage.removeItem("pf_name");
+  if(li) localStorage.setItem("pf_linkedin",li); else localStorage.removeItem("pf_linkedin");
+  if(gh) localStorage.setItem("pf_github",gh); else localStorage.removeItem("pf_github");
+  if(em) localStorage.setItem("pf_email",em); else localStorage.removeItem("pf_email");
+  applyContacts();
+  document.getElementById("admMsg2").innerHTML='<div class="admin-ok">Saved in this browser.</div>';
+}
+function adminReset(){ localStorage.removeItem("pf_name");localStorage.removeItem("pf_linkedin");localStorage.removeItem("pf_github");localStorage.removeItem("pf_email");location.reload(); }
+applyContacts();
+</script>
+</body></html>
